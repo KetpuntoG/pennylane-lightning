@@ -145,7 +145,7 @@ jobs:
 
           CIBW_BUILD_FRONTEND: build
 
-        run: python -m cibuildwheel --output-dir wheelhouse --debug-traceback
+        run: python -m cibuildwheel --output-dir wheelhouse
 
       - name: Patch wheels
         run: |

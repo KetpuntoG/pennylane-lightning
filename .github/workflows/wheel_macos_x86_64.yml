@@ -167,7 +167,7 @@ jobs:
           CIBW_ARCHS_MACOS: ${{matrix.arch}}
 
         run: |
-          python -m cibuildwheel --output-dir wheelhouse --debug-traceback
+          python -m cibuildwheel --output-dir wheelhouse
 
       - name: Validate wheels
         run: |
