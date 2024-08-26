@@ -151,7 +151,7 @@ jobs:
 
           CIBW_BUILD_VERBOSITY: 3
 
-        run: python3 -m cibuildwheel --output-dir wheelhouse
+        run: python3 -m cibuildwheel --output-dir wheelhouse --debug-traceback
 
       - name: Validate wheels
         run: |

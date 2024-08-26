@@ -164,7 +164,7 @@ jobs:
             DEVICENAME=`echo ${{ matrix.pl_backend }} | sed "s/_/./g"`
             pl-device-test --device=${DEVICENAME} --skip-ops -x --tb=short --no-flaky-report
 
-        run: python3 -m cibuildwheel --output-dir wheelhouse
+        run: python3 -m cibuildwheel --output-dir wheelhouse --debug-traceback
 
       - name: Validate wheels
         run: |

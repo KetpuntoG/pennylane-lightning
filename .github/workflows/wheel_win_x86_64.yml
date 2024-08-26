@@ -134,7 +134,7 @@ jobs:
 
           # Python build settings
           CIBW_BEFORE_BUILD: |
-            python -m pip install pybind11 cmake~=3.24.0 build
+            python -m pip install pybind11 cmake~=3.24.0 build tomlkit
 
           CIBW_ENVIRONMENT: |
             CMAKE_ARGS="-DENABLE_LAPACK=OFF"
@@ -145,7 +145,7 @@ jobs:
 
           CIBW_BUILD_FRONTEND: build
 
-        run: python -m cibuildwheel --output-dir wheelhouse
+        run: python -m cibuildwheel --output-dir wheelhouse --debug-traceback
 
       - name: Patch wheels
         run: |
